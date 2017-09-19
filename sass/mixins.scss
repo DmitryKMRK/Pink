@@ -1,0 +1,21 @@
+@mixin clearfix {
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin adaptive {
+  width: 280px;
+  margin: 0 auto;
+
+  @media(min-width: 660px) {
+    width: 620px;
+  }
+
+  @media(min-width: 1200px) {
+    width: 940px;
+  }
+}

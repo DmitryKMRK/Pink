@@ -1,0 +1,25 @@
+.slider__controls-item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #283645;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:not(.slider__controls-item--active):hover {
+    opacity: 0.6;
+  }
+
+  &:not(.slider__controls-item--active):active {
+    opacity: 0.1;
+  }
+
+  &--active {
+    background: #ffffff;
+    border: 3px solid #283645;
+    border-radius: 50%;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,259 @@
+.gallery__item {
+  width: 280px;
+  margin-bottom: 23px;
+
+  &--3 {
+    margin-bottom: 21px;
+  }
+}
+
+.gallery__item-featured {
+  margin-bottom: 22px;
+}
+
+.gallery__item-photo {
+  width: 280px;
+  height: 180px;
+}
+
+.gallery__item-photo img {
+  object-fit: cover;
+  width: 280px;
+  height: 180px;
+}
+
+.gallery__item-photo-featured img {
+  width: 100%;
+  height: 137px;
+  object-fit: cover;
+}
+
+.gallery__item-description {
+  position: relative;
+  box-sizing: border-box;
+  padding: 19px 17px;
+  background-color: #f2f2f2;
+
+  &--featured {
+    width: 100%;
+    margin-top: -3px;
+  }
+
+  &--featured::before {
+    content: "";
+    width: 140px;
+    height: 36px;
+    background: url("../img/photo-featured-label.png") no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top: -137px;
+  }
+}
+
+.gallery__post-author {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #283645;
+}
+
+.gallery__post-time {
+  font-size: 12px;
+  line-height: 24px;
+  color: #283645;
+  text-transform: uppercase;
+}
+
+.gallery__post {
+  width: 260px;
+  margin-top: -2px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}
+
+.gallery__post-likes {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1px;
+}
+
+.gallery__post-likes-icon {
+  margin-right: 19px;
+  width: 14px;
+  height: 12px;
+  margin-top: 5px;
+  background: url("../img/icon-heart.png") no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery__post-likes-text {
+  font-size: 12px;
+  line-height: 24px;
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+@media(min-width: 660px) {
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gallery__item-photo-featured img {
+    height: 509px;
+  }
+
+  .gallery__items-list .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .gallery__item {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .gallery__item-featured {
+    margin-bottom: 50px;
+  }
+
+  .gallery__item-photo {
+    width: 300px;
+    height: 300px;
+  }
+
+  .gallery__item-photo img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .gallery__item-description {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 23px;
+    padding-left: 28px;
+    height: 155px;
+
+    &--featured {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 121px;
+    }
+
+    &--featured::before {
+      top: -452px;
+    }
+  }
+
+  .gallery__post {
+    width: 232px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &--featured {
+      width: 520px;
+      margin-top: -25px;
+    }
+  }
+
+  .gallery__post-likes {
+    margin-top: auto;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--featured {
+      width: 137px;
+      margin-top: 1px;
+      margin-right: -7px;
+      order: 2;
+    }
+  }
+
+  .gallery__post-likes-icon {
+    margin-right: 15px;
+
+    &--featured {
+      margin-right: 18px;
+    }
+  }
+
+  .gallery__post-info {
+
+    &--featured {
+      order: 1;
+    }
+  }
+
+  .gallery__post {
+
+    &--featured {
+      order: 3;
+    }
+  }
+
+}
+
+@media(min-width: 1200px) {
+
+  .gallery__item {
+    margin-bottom: 54px;
+  }
+
+  .gallery__item-featured {
+    margin-bottom: 50px;
+  }
+
+  .gallery__item-photo-featured img {
+    height: 506px;
+  }
+
+  .gallery__item-photo {
+    width: 300px;
+    height: 400px;
+  }
+
+  .gallery__item-photo img {
+    object-fit: cover;
+    width: 300px;
+    height: 400px;
+  }
+
+  .gallery__item-description {
+
+    &--featured {
+      height: 96px;
+      padding-bottom: 4px;
+    }
+
+    &--featured::before {
+      top: -452px;
+    }
+  }
+
+  .gallery__post {
+
+    &--featured {
+      width: 880px;
+    }
+  }
+
+  .gallery__post-likes {
+
+    &--featured {
+      margin-right: -2px;
+    }
+  }
+
+}

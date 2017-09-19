@@ -1,0 +1,261 @@
+.rates-block {
+  position: relative;
+  padding-top: 93px;
+  background-color: #f2f2f2;
+  padding-bottom: 100px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 33%;
+    position: absolute;
+    background: url("../img/bg-triangle-white.svg") no-repeat;
+    background-size: contain;
+    top: 0;
+  }
+}
+
+.rates-block__slider {
+  height: 281px;
+  position: relative;
+}
+
+.rates-block__slider .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rates-block__table {
+  width: 836px;
+  margin: 0 auto;
+  border: 2px solid #f2f2f2;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -418px;
+}
+
+.rates-block__table-heading {
+  box-sizing: border-box;
+  height: 98px;
+  border-bottom: 2px solid #283645;
+  background: #283645;
+  padding-top: 16px;
+  padding-bottom: 19px;
+
+  &--hidden {
+    background: transparent;
+    display: none;
+    border: none;
+  }
+
+  &--hit {
+    position: relative;
+  }
+
+  &--hit::after {
+    content: "";
+    width: 73px;
+    height: 73px;
+    background: url("../img/hit.png") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.rates-block__table-heading p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.rates-block__table-heading span {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.rates-block__table-item {
+  box-sizing: border-box;
+  position: relative;
+  width: 33.33333%;
+  height: 61px;
+  padding-left: 20px;
+  border: none;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #283645;
+  background-color: #ffffff;
+
+  &:first-child {
+    display: none;
+  }
+
+  &--yes::after {
+    content: "";
+    width: 31px;
+    height: 21px;
+    position: absolute;
+    right: 17px;
+    top: 20px;
+    background: url("../img/icon-yes.svg") no-repeat;
+    background-size: 31px 21px;
+  }
+
+  &--no::after {
+    content: "";
+    width: 27px;
+    height: 26px;
+    position: absolute;
+    right: 19px;
+    top: 15px;
+    background: url("../img/icon-no.svg") no-repeat;
+    background-size: 27px 26px;
+  }
+}
+
+.rates-block__slider-controls {
+  display: flex;
+  align-items: center;
+  margin-top: 321px;
+  margin-left: 15px;
+}
+
+.rates-block__slider-controls-item {
+  margin-right: 18px;
+}
+
+@media(min-width: 660px) {
+
+  .rates-block {
+    padding-top: 90px;
+    padding-bottom: 7px;
+  }
+
+  .rates-block__table {
+    width: 620px;
+    position: static;
+    margin: 0 auto;
+  }
+
+  .rates-block__table-item {
+    width: 25%;
+    height: 47px;
+    padding-left: 15px;
+    font-size: 0px;
+
+    &:first-child {
+      display: table-cell;
+      font-size: 14px;
+      line-height: 30px;
+      text-transform: none;
+    }
+
+    &--yes::after {
+      right: 60px;
+      top: 12px;
+    }
+
+    &--no::after {
+      right: 62px;
+      top: 8px;
+    }
+  }
+
+  .rates-block__table-heading {
+    height: 79px;
+    padding-top: 11px;
+    padding-bottom: 8px;
+
+    &--hidden {
+      display: table-cell;
+    }
+
+    &--hit::after {
+      width: 61px;
+      height: 61px;
+      background: url("../img/hit-tablet.png") no-repeat;
+    }
+
+    p {
+      margin-bottom: -1px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .rates-block__slider-controls {
+    display: none;
+  }
+
+}
+
+@media(min-width: 1200px) {
+
+  .rates-block {
+    padding-top: 167px;
+    padding-bottom: 95px;
+  }
+
+  .rates-block__table {
+    width: 942px;
+  }
+
+  .rates-block__table-item {
+    height: 61px;
+    padding-left: 24px;
+
+    &:first-child {
+      padding-top: 2px;
+      font-size: 18px;
+    }
+
+    &--yes::after {
+      right: 101px;
+      top: 22px;
+    }
+
+    &--no::after {
+      right: 103px;
+      top: 16px;
+    }
+  }
+
+  .rates-block__table-title {
+    padding-top: 13px;
+    font-size: 18px;
+  }
+
+  .rates-block__table-heading {
+    padding-top: 17px;
+    padding-bottom: 19px;
+
+    p {
+      font-size: 18px;
+    }
+
+    span {
+      font-size: 24px;
+    }
+
+    &--hit::after {
+      content: "";
+      width: 73px;
+      height: 73px;
+      background: url("../img/hit.png") no-repeat;
+    }
+  }
+
+}
